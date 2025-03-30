@@ -1,0 +1,1268 @@
+<!--<!DOCTYPE html>-->
+<html>
+<head>
+<title>首頁概要</title>
+<link href="網頁程式設計第六組-六腳行網頁.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
+        <script src="booklet/jquery.easing.1.3.js" type="text/javascript"></script>
+        <script src="booklet/jquery.booklet.1.1.0.min.js" type="text/javascript"></script>
+        <link href="booklet/jquery.booklet.1.1.0.css" type="text/css" rel="stylesheet" media="screen" />
+        <link rel="stylesheet" href="css/style.css" type="text/css" media="screen"/>
+        <script src="cufon/cufon-yui.js" type="text/javascript"></script>
+        <script src="cufon/ChunkFive_400.font.js" type="text/javascript"></script>
+        <script src="cufon/Note_this_400.font.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            Cufon.replace('h1,p,.b-counter');
+            Cufon.replace('.book_wrapper a', {hover:true});
+            Cufon.replace('.title', {textShadow: '1px 1px #C59471', fontFamily:'ChunkFive'});
+            Cufon.replace('.reference a', {textShadow: '1px 1px #C59471', fontFamily:'ChunkFive'});
+            Cufon.replace('.loading', {textShadow: '1px 1px #000', fontFamily:'ChunkFive'});
+        </script> 
+</head>
+
+<style> 
+        .black_overlay{ 
+            display: none; 
+            position: absolute; 
+            top: 0%; 
+            left: 0%; 
+            width: 100%; 
+            height: 100%; 
+            background-color: black; 
+            z-index:1001; 
+            -moz-opacity: 0.8; 
+            opacity:.80; 
+            filter: alpha(opacity=88); 
+        } 
+        .white_content { 
+            display: none; 
+            position: absolute; 
+            top: 5%; 
+            left: 8%; 
+            width: 80%; 
+            height: 80%; 
+            padding: 20px; 
+            border: 10px solid orange; 
+            background-color: white; 
+            z-index:1002; 
+            overflow: auto; 
+        } 
+
+           .white_content_book { 
+            display: none; 
+            position: absolute; 
+            top: -40px; 
+            left: 0%; 
+            width: 100%; 
+            height: 100%; 
+            padding: 20px; 
+            z-index:1002; 
+            overflow: auto; 
+        }
+
+            .tv_background { 
+            background:url("https://upload.cc/i1/2021/01/13/l5rf9c.png");
+            background-repeat: no-repeat;
+            background-size:95% 100%;
+            display: none; 
+            position: absolute; 
+            top: 3%; 
+            left: 5%; 
+            width: 90%; 
+            height: 90%; 
+            padding: 20px; 
+            z-index:1002; 
+            overflow: auto; 
+        }
+
+            .map_background{
+            background:url("https://i.imgur.com/mmSQvhk.png");
+            background-repeat: no-repeat;
+            display: none; 
+            position: absolute; 
+            top: 10%; 
+            left: 18%; 
+            width: 80%; 
+            height: 90%; 
+            padding: 20px; 
+            z-index:1002; 
+            overflow: auto; 
+        }
+
+          /*電話專屬*/
+            .white_content1 {
+            background:url("https://upload.cc/i1/2021/01/13/fmbkno.jpeg");
+            background-repeat: no-repeat;
+            display: none;
+            position: absolute;
+            top: 10%;
+            left: 14%;
+            width: 70%;
+            height: 72%;
+            padding: 20px;
+            z-index: 1003;
+            overflow: auto;
+         }
+
+         /*抽籤的背景*/
+            .ran_bg { 
+            background:url("https://upload.cc/i1/2021/01/12/peHB5D.png");
+            background-repeat: no-repeat;
+            display: none; 
+            position: absolute; 
+            top: 10%; 
+            left: 20%; 
+            width: 80%; 
+            height: 90%; 
+            padding: 20px; 
+            z-index:1002; 
+            overflow: auto; 
+        }
+
+</style> 
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="jquery.rwdImageMaps.js"></script>
+<script>
+    $(document).ready(function(e) {
+        $('img[usemap]').rwdImageMaps();
+    });
+</script>
+
+<body background="https://upload.cc/i1/2021/01/12/aKyX9Q.png">
+
+<div class="preloader" style="display: none; opacity: 0;">
+	<div class="loading-info" style="opacity: 0;">
+		<img src="https://uploads-ssl.webflow.com/5d3a7aed4e11722bc1d46f10/5d3a7aed4e1172a784d470e2_preloader.gif" alt="" class="loading-icon">
+		<div>Loading...</div>
+	</div>
+</div>
+
+
+<img src="https://upload.cc/i1/2021/01/13/wJ6VkS.gif
+" style="position:absolute;top:0%;left:80%;width: 200px;height: 200px;">
+<!--讓系統日期顯示在日曆上-->
+  <!--月-->
+  <div style= "position:absolute; left:777px; top:245px; color:black; font-weight:bold ;font-size:20px;color:red;">
+  <script>
+    var Today=new Date();
+    document.write((Today.getMonth()+1)+"月" ); 
+  </script>
+  </div> 
+
+  <!--日-->
+  <div style= "position:absolute; left:795px; top:260px; font-weight:bold ;font-size:55px;color:red;">
+  <script>
+    var Today=new Date();
+    document.write( Today.getDate()); 
+  </script>
+  </div> 
+
+<!--功能圖片-->
+  <!--地圖-->
+  <a href="javascript:void(0)" onclick = "document.getElementById('1_map').style.display='block';document.getElementById('fade').style.display='block'"><img src="https://i.imgur.com/wI1kTUC.png" border="0"  class='map1' style="position:absolute;top:150px;left:190px; width:248px; height: 361px"></a>
+  <!--抽抽樂-->
+  <a href="javascript:void(0)" onclick = "document.getElementById('2_ran').style.display='block';getRandom();document.getElementById('fade').style.display='block'"><img src="https://i.imgur.com/71g2xDe.png" border="0" class='ran2' style="position:absolute;top:550px;left:452px; width:260px; height: 161px"></a>
+  <!--小狗-->
+  <a href="javascript:void(0)" onclick = "document.getElementById('3_dog').style.display='block';document.getElementById('fade').style.display='block'"><img src="https://i.imgur.com/jbqs1rZ.png" border="0"  class='dog3' style="position:absolute;top:500px;left:820px; width:140px; height: 196px"></a>
+  <img src="https://upload.cc/i1/2021/01/13/GwU1du.png" style="position: absolute;width:60px;height:60px;top:87%;left:65%;">
+  <!--電視-->
+  <a href="javascript:void(0)" onclick = "document.getElementById('4_tv').style.display='block';document.getElementById('fade').style.display='block'"><img src="https://i.imgur.com/N4KzLIY.png" border="0"  class='tv4' style="position:absolute;top:310px;left:430px; width:174px; height: 141px"></a>
+  <!--電話-->
+  <a href="javascript:void(0)" onclick= "document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'"><img src="https://i.imgur.com/hypEk4R.png" border="0" class='tel5' style="position:absolute;top:360px;left:620px; width:110px; height: 89px"></a>
+  <!--書本-->
+  <a href="javascript:void(0)" onclick = "document.getElementById('6_book').style.display='block';document.getElementById('fade').style.display='block'"><img src="https://i.imgur.com/VuntSUK.png" border="0"  class='book6' style="position:absolute;top:330px;left:1045px; width:120px; height: 152px"></a>
+  <!--雜誌-->
+  <a href="javascript:void(0)" onclick = "document.getElementById('7_mag').style.display='block';document.getElementById('fade').style.display='block'"><img src="https://upload.cc/i1/2021/01/12/TkO2Wb.png" border="0"  class='mag7' style="position:absolute;top:535px;left:180px; width:120px; height: 152px"></a>
+  <!--溫度計-->
+  <a href="javascript:void(0)" onclick = "document.getElementById('8_cal').style.display='block';document.getElementById('fade').style.display='block'"><img src="https://upload.cc/i1/2021/01/12/nLkQvd.png" border="0"  class='cal8' style="position:absolute;top:170px;left:670px; width:67px; height: 125px"></a>
+
+
+  <!--地圖part-->
+  <div id="1_map" class="map_background">  
+    <a href = "javascript:void(0)" onclick = "document.getElementById('1_map').style.display='none';document.getElementById('fade').style.display='none'"><img src="https://i.imgur.com/B6M2gX9.png" style="position:absolute;top:5px;left:80%; width:40px; height: 40px"></a><!--關閉的圖片按鈕-->
+  </div>
+
+
+  <!--戳戳樂part-->
+  <div id="2_ran" class="ran_bg" style="-webkit-writing-mode: vertical-lr;writing-mode: vertical-lr;">
+  <a href = "javascript:void(0)" onclick = "document.getElementById('2_ran').style.display='none';document.getElementById('fade').style.display='none'"><img src="https://i.imgur.com/B6M2gX9.png" style="position:absolute;top:0px;left:66%; width:40px; height: 40px"></a><!--關閉的圖片按鈕-->
+
+    <h2 id="2_ran_content"style="position:absolute;top:10%;left:10%;font-size:38px;font-family:微軟正黑體;">微軟正黑體字型">以下是您的戳戳樂結果：</h2>
+    <!-- <span id="result"> </span> -->
+
+    <script>
+        /*  $(document).ready(function(){ //div置中
+              $('#centerdiv').center();
+              $(window).bind('resize',function(){
+                  $('#centerdiv').center({transition:500});
+              });
+          });*/
+        function getRandom() {
+            /*產生1-18亂數*/
+            var num= Math.floor(Math.random() * 18) + 1;
+            console.log(num)
+            if (num == 1) {
+              document.getElementById("2_ran_content").innerHTML ="蒜頭糖廠蔗埕文化園區"+'<br>'+'08:00-17:00(無公休)'+'<br>'+'嘉義縣六腳鄉工廠村1號'
+            }
+            if (num == 2) {
+              document.getElementById("2_ran_content").innerHTML ='蒜頭生態公園'+'<br>'+'24小時營業(無公休)'+'<br>'+'嘉義縣六腳鄉蒜頭生態公園'
+            }
+            if (num == 3){
+            document.getElementById("2_ran_content").innerHTML ='六家佃長壽橋'+'<br>'+'24小時營業(無公休)'+'<br>'+'嘉義縣六腳鄉六家佃長壽橋'
+            }
+            if (num == 4){
+              document.getElementById("2_ran_content").innerHTML ='陶藝之村墘窯休閒陶坊'+'<br>'+'週一~週五早上 8:00~12:00，下午1:30~17:30'+'<br>'+'嘉義縣六腳鄉潭墘村75-12號'
+            }
+            if (num == 5){
+            document.getElementById("2_ran_content").innerHTML ='彩繪鸚鵡牆'+'<br>'+'24小時營業(無公休)'+'<br>'+'北港溪竹子腳堤岸'
+            }
+            if (num == 6){
+            document.getElementById("2_ran_content").innerHTML ='慶和柑仔店'+'<br>'+'06:30-20:00'+'<br>'+'嘉義縣六腳鄉166縣道91號'
+            }
+            if (num == 7){
+              document.getElementById("2_ran_content").innerHTML ='故宮三寶'+'<br>'+'24小時營業(無公休)'+'<br>'+'嘉義縣六腳鄉蒜頭村7-20號'
+            }
+            if (num == 8){
+            document.getElementById("2_ran_content").innerHTML ='鳳凰花池'+'<br>'+'24小時營業(無公休)'+'<br>'+'嘉義縣六腳鄉竹本村竹子腳13號'
+            }
+            if (num == 9){
+            document.getElementById("2_ran_content").innerHTML ='苦楝樹綠色隧道'+'<br>'+'24小時營業(無公休)'+'<br>'+'嘉義縣六腳鄉615安灣橋下方'
+            }
+            if (num == 10){
+            document.getElementById("2_ran_content").innerHTML ='老福仔食品'+'<br>'+'早上08:00～晚上19:00'+'<br>'+'嘉義縣六腳鄉港美村33-2號 '
+            }
+            if (num == 11){
+            document.getElementById("2_ran_content").innerHTML ='新寶珍餅店'+'<br>'+'早上07：30～晚上20：00'+'<br>'+'嘉義縣六腳鄉蒜頭村77-28號'
+            }
+            if (num == 12){
+            document.getElementById("2_ran_content").innerHTML ='興旺餅店'+'<br>'+'早上07:30~晚上21:30'+'<br>'+'嘉義縣六腳鄉蒜頭村110~3號(中華電信斜對面)'
+            }
+            if (num == 13){
+              document.getElementById("2_ran_content").innerHTML ='大腸包香腸'+'<br>'+'下午13:30-售完公休日禮拜四'+'<br>'+'嘉義縣六腳鄉蒜頭村188號(蒜頭國小)'
+            }
+            if (num == 14){
+            document.getElementById("2_ran_content").innerHTML ='巴度窑'+'<br>'+'10:00–20:00 周一公休'+'<br>'+'嘉義縣六腳鄉蒜南村448-5號'
+            }
+            if (num == 15){
+            document.getElementById("2_ran_content").innerHTML ='荳鄉咖啡農園'+'<br>'+'週五六日 10:30–18:00'+'<br>'+'615嘉義縣六腳鄉第3鄰溪墘厝25之10'
+            }
+            if (num == 16){
+            document.getElementById("2_ran_content").innerHTML ='"鮮萃［北歐風］早午餐、鬆餅、咖啡'+'<br>'+'周一二三四六日07:00–16:00'+'<br>'+'615嘉義縣六腳鄉大橋頭205號'
+            }if (num == 17){
+            document.getElementById("2_ran_content").innerHTML ='時代芋冰城'+'<br>'+'08:00–18:00，周二公休'+'<br>'+'615嘉義縣六腳鄉崙子187號'
+            }if (num == 18){
+              document.getElementById("2_ran_content").innerHTML ='正港臭豆腐'+'<br>'+'14:00–19:00，週二及日公休'+'<br>'+'615嘉義縣六腳鄉蘇厝寮270號'
+            }
+          };
+    </script>
+  </div> 
+  <div id="fade" class="black_overlay"></div>
+
+  <!--小狗part-->
+  <div id="3_dog" class="white_content_book">
+    <!--關閉的圖片按鈕-->
+    <a href = "javascript:void(0)" onclick = "document.getElementById('3_dog').style.display='none';document.getElementById('fade').style.display='none'"><img src="https://i.imgur.com/B6M2gX9.png" style="position:absolute;top:90px;left:87%; width:40px; height: 40px"></a>
+      <img src="https://i.imgur.com/nou0Lh5.png" class="book_wrapper" style="z-index: -1;opacity: 85%;">   <!--報紙-->
+      <div style="position: absolute; margin-left: 250px;margin-top: 80px;width: 500px">
+        <div class="sword" style="">六腳新聞報</div>
+        <hr>
+        <div class="header"><b>六腳新聞報</b></div>
+        <div class="name">最新消息</div>
+        <hr>
+        <hr>  
+        <ul style="margin-left: 120px; font-size: 16px;">
+          <b><li class="lii"><b>110-01-11&nbsp&nbsp</b>110年起施行食品標示新規定
+          </li>
+          <li class="lii"><b>110-01-11&nbsp&nbsp</b>110年度「獎勵影視拍攝補助徵件」
+          </li>
+          <li class="lii"><b>110-01-08&nbsp&nbsp</b>新式外來人口統一證號換發宣導
+          </li>
+          <li class="lii"><b>110-01-07&nbsp&nbsp</b>救國團嘉義團「110年青年節社會優秀青年楷模選拔」
+          </li>
+          <li class="lii"><b>110-01-06&nbsp&nbsp</b>「嘉義縣110年度自學進修國民中小學畢業程度(含身心障礙國民)學力鑑定考試簡章」
+          </li><li class="lii"><b>110-01-06&nbsp&nbsp</b>嘉義縣文化觀光局「110年度嘉義縣推動社區營造三期補助計畫提案說明會」
+          </li>
+          <li class="lii"><b>110-01-06&nbsp&nbsp</b>中華道統慈惠協會「第24屆全國慈善楷模」</li>
+          <li class="lii"><b>110-01-04&nbsp&nbsp</b>「媒體識讀-假新聞面面觀」
+          </li>
+          <li class="lii"><b>109-12-31&nbsp&nbsp</b>本鄉圖書館開館時間公告
+          </li>
+          <li class="lii"><b>109-12-31&nbsp&nbsp</b>「國立特殊教育學校110學年度國民教育暨學前教育階段特殊教育學生聯合安置簡章」
+          </li>
+        </ul>
+      </div>
+      <div style="position: absolute; margin-left: 805px;margin-top: 80px;width: 500px">
+        <div class="sword">六腳新聞報</div>
+        <hr>
+        <ul style="font-size: 16px;">
+          <li class="lii"><b>109-12-31&nbsp&nbsp</b>客家委員會辦理「2021客家貢獻獎」開始報名囉
+          </li>
+          <li class="lii"><b>109-12-31&nbsp&nbsp</b>財團法人九華山地藏庵「110年慶元宵~親子寫生比賽」
+          </li>
+          <li class="lii"><b>109-12-30&nbsp&nbsp</b>宜蘭縣政府「110年全國原住民族運動會宣傳影片及大會<br>主題曲」
+          </li>
+          <li class="lii"><b>109-12-25&nbsp&nbsp</b>教育部「教育部運動發展基金補助運動科學支援競技運動<br>作業要點」
+          </li>
+          <li class="lii"><b>109-12-23&nbsp&nbsp</b>【2021 企業 CSR X 地方創生提案競賽】
+          </li>
+          <li class="lii"><b>109-12-23&nbsp&nbsp</b>太麻里「2021跨年迎曙光音樂祭」
+          </li>
+          <li class="lii"><b>109-12-18&nbsp&nbsp</b>國防部「寒假戰鬥營」
+          </li>
+          <li class="lii"><b>109-12-14&nbsp&nbsp</b>
+          元旦連續假期間公共運輸疏運優惠票價方案
+          </li>
+          <li class="lii"><b>109-12-11&nbsp&nbsp</b>明（110）年1月1日起民國91年次役男出境應經核准
+          </li>
+          <li class="lii"><b>109-12-11&nbsp&nbsp</b>北市政府客家事務局「110年度畢業展徵件」
+          </li></b>
+        </ul>
+      </div>
+    </div>
+  <div id="fade" class="black_overlay"></div>
+
+  <!--電視part-->
+  <div id="4_tv" class="tv_background">
+    <!--關閉圖片如以下-->
+    <a href = "javascript:void(0)" onclick = "document.getElementById('4_tv').style.display='none';document.getElementById('fade').style.display='none'"><img src="https://i.imgur.com/B6M2gX9.png" style="position:absolute;top:3px;left:97%; width:40px; height: 40px"></a>
+    <!--Youtube影片--> 
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/L9qLWLNcvK0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <div id="fade" class="black_overlay"></div>
+
+  <!--電話part-->
+  <!-- 第一層 -->
+    <div id="light" class="white_content1">
+        <!-- 叉叉 關掉第一層-->
+        <a href="javascript:void(0)"
+            onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">
+            <img src="https://i.imgur.com/B6M2gX9.png"  style="position:absolute;top:10px;left:95%; width:40px; height: 40px"></a>
+            <img src="https://upload.cc/i1/2021/01/12/pQN1SG.png"  style="position:absolute;top:12%;left:8%;width:240px; height:180px">
+            <img src="https://upload.cc/i1/2021/01/12/36SQvO.png" style="position:absolute;top:11%;left:43%; width:180px; height:120px">
+            <img src="https://upload.cc/i1/2021/01/12/WRAXVI.png" style="position:absolute;top:11%;left:75%; width:180px; height:120px">
+        <!-- 內容 id有分為light1(貼心小叮嚀)、light2(公家機關)、light3(診所)-->
+        <a href="javascript:void(1)" onclick="document.getElementById('light1').style.display='block'" class="sweet">
+            <img src="https://i.imgur.com/mUFpCq9.png" style="position:absolute;top:200px;left:10%; width:18%; height: 45%" class="sweet"></a>
+        <a href="javascript:void(1)" onclick="document.getElementById('light2').style.display='block'" class="public">
+            <img src="https://i.imgur.com/waZzw7S.png" style="position:absolute;top:200px;left:40%; width:18%; height: 45%" class="public"></a>
+     
+
+        <a href="javascript:void(1)" onclick="document.getElementById('light3').style.display='block'" class="hospital"> 
+            <img src="https://i.imgur.com/0uVvxmM.png" style="position:absolute;top:200px;left:70%; width:18%; height: 45%" class="hospital"></a>
+  
+    </div>
+    <!-- 第二層 id有light1(貼心小叮嚀)、light2(公家機關)、light3(診所)，class都是white_content1(新+上的) -->
+    <!-- 貼心小叮嚀 內容-->
+    <div id="light1" class="white_content1">
+        <!-- 叉叉 關掉第一層跟第二層內容，回到主頁-->
+        <a href="javascript:void(0)" onclick="document.getElementById('light1').style.display='none';document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">
+            <img src="https://i.imgur.com/B6M2gX9.png" style="position:absolute;top:10px;left:95%; width:40px; height: 40px"></a>
+        <!--  內容 -->
+        <img src="https://upload.cc/i1/2021/01/12/pQN1SG.png"  style="position:absolute;top:5%;left:0%; width:350px; height:250px">
+        <a href="javascript:void(1)"><img src="https://upload.cc/i1/2021/01/12/Sqx7Oi.png"  style="position:absolute;top:58px;left:32%; width:65%; height: 85%"></a>
+        <!-- 打給聯絡人 僅圖示 -->
+        <img src="https://i.imgur.com/mUFpCq9.png" style="position:absolute;top:31%;left:3%; width:20%; height: 45%">
+        <!-- 返回鍵 返回第一層，不會回到主頁-->
+        <a href="javascript:void(0)" onclick="document.getElementById('light1').style.display='none'">
+            <img src="https://i.imgur.com/twlWFGy.png" style="position:absolute;top:88%;left:2%; width:60px; height: 60px"></a>
+            <h2 style="position:absolute;top:91%;left:8%;">返回
+    </div>
+
+
+    <!-- 公家機關 內容-->
+    <div id="light2" class="white_content1">
+        <!-- 叉叉 關掉第一層跟第二層內容，回到主頁-->
+        <a href="javascript:void(0)" onclick="document.getElementById('light2').style.display='none';document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">
+            <img src="https://i.imgur.com/B6M2gX9.png" style="position:absolute;top:10px;left:95%; width:40px; height: 40px"></a>
+        <!--  內容 -->
+        <img src="https://upload.cc/i1/2021/01/12/36SQvO.png" style="position:absolute;top:1%;left:4%; width:280px; height:180px">
+        <a href="javascript:void(1)"><img src="https://upload.cc/i1/2021/01/13/ZmL2gM.png"  style="position:absolute;top:58px;left:27%; width:65%; height: 85%"></a>
+        <!-- 打給聯絡人 僅圖示 -->
+        <img src="https://i.imgur.com/waZzw7S.png" style="position:absolute;top:31%;left:3%; width:20%; height: 45%">
+        <!-- 返回鍵 返回第一層，不會回到主頁-->
+        <a href="javascript:void(0)" onclick="document.getElementById('light2').style.display='none'">
+            <img src="https://i.imgur.com/twlWFGy.png" style="position:absolute;top:88%;left:2%; width:60px; height: 60px"></a>
+            <h2 style="position:absolute;top:91%;left:8%;">返回
+    </div>
+
+    <!-- 診所 內容-->
+    <div id="light3" class="white_content1">
+        <!-- 叉叉 關掉第一層跟第二層內容，回到主頁-->
+        <a href="javascript:void(0)" onclick="document.getElementById('light3').style.display='none';document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">
+            <img src="https://i.imgur.com/B6M2gX9.png" style="position:absolute;top:10px;left:95%; width:40px; height: 40px"></a>
+        <!--  內容 -->
+        <img src="https://upload.cc/i1/2021/01/12/WRAXVI.png" style="position:absolute;top:1%;left:5.5%; width:280px; height:180px">
+        <a href="javascript:void(1)"><img src="https://upload.cc/i1/2021/01/13/ynraBi.png"  style="position:absolute;top:58px;left:27%; width:65%; height: 85%"></a>
+        <!-- 打給聯絡人 僅圖示 -->
+        <img src="https://i.imgur.com/0uVvxmM.png" style="position:absolute;top:31%;left:3%; width:20%; height: 45%">
+        <!-- 返回鍵 返回第一層，不會回到主頁-->
+        <a href="javascript:void(0)" onclick="document.getElementById('light3').style.display='none'">
+            <img src="https://i.imgur.com/twlWFGy.png" style="position:absolute;top:88%;left:2%; width:60px; height: 60px"></a>
+            <h2 style="position:absolute;top:91%;left:8%;">返回
+    </div>
+  <div id="fade" class="black_overlay"></div>
+
+  <!--雜誌part-->
+  <div id="7_mag" class="white_content_book">
+    <a href = "javascript:void(0)" onclick = "document.getElementById('7_mag').style.display='none';document.getElementById('fade').style.display='none'"><img src="https://i.imgur.com/B6M2gX9.png" style="position:absolute;top:90px;left:87%; width:40px; height: 40px"></a><!--關閉的圖片按鈕-->
+    <!--半日遊-->
+  <a id="prev_page_button"></a>  <!--上一頁按鈕-->
+    <img src="https://i.imgur.com/ivs6BTW.png" class="book_wrapper">    <!--黑色書-->
+      <div id="mybook" style="display:none;">
+        <div class="b-load">
+          <div>
+            <img src="https://i.imgur.com/wW3dep5.png" style="margin-top: 200px; margin-left: 130px; width: 230px;height: 100px;">
+          </div>
+          <div> <!--一個div一頁-->  <!--P.1-->
+            <div class="bigname">六腳半日遊</div>
+            <img src="https://i.imgur.com/DstAkyH.jpg" class="pic">           
+            <div class="inf">行程規劃：<br>
+              第一站： 中餐－巴度窑窯烤披薩<br>
+              第二站：蒜頭糖廠<br>
+              第三站：伴手禮－新寶珍蒜頭餅<br>
+              第四站：慶和柑仔店<br>
+              第五站：彩繪鸚鵡牆<br>
+              此趟一日遊的行程當中，所使用的交通工具皆為摩托車。
+            </div>
+          </div>
+          <div><!--P.2-->
+            <!-- 上半部 -->
+            <div>
+              <img src="https://i.imgur.com/st0Bllz.png" id="" class="spic" style="float:left; margin-right: 8px;margin-left: 10px; margin-top: 5px;">
+              <div style="font-size: 20px;">
+                <b style="margin-left: 7px;margin-top: 10px;">六腳鄉</b>
+              </div>
+              <div style="font-size:16px; height:100px;position: absolute;margin-left:265px;margin-top: 5px">         
+                在接近10月的某一天中午，我們一行五人臨時起意前往嘉義縣六腳鄉，從嘉義大學出發，途經的道路皆是大馬路。而在離開市區之後，是空曠的高鐵大道，來往車輛不算多也不算少，是很適合騎乘機車的路，一路上幾乎是直
+              </div>
+              <div class="inside" style="margin-top: 158px;margin-left:3px;">
+                行，就連身為路痴的我也只管埋頭向前即可，隨著路旁的風景不再出現高樓，且空間愈來愈空曠，映入眼簾的是一片片的綠意。
+              </div>
+            </div>  
+            <!-- 下半部 -->
+            <div>
+              <img src="https://i.imgur.com/4R4JV8U.jpg" class="spic" style="float:right; margin-left:-15px;position: absolute;margin-top: 233px;">
+              <div style="font-size: 20px; text-align: left;float:left; margin-top: 75px;">
+                <b style="margin-left: 3px;margin-right: 200px;">窯烤披薩</b>
+              </div>
+              <div style="font-size:16px; height:100px;position: absolute;margin-left:3px;margin-top: 255px;float: left; width: 230px;">              
+                首站，當然是先填飽肚子，我們選擇當地的一間窯烤披薩店－巴度窑作為目標，半開放式的空間，可以看見附近鄉村的景象，再搭配店家豢養家禽雞隻的鳴叫聲，彷佛置身大自然。另外，多樣化的餐點，也讓飢腸轆轆的我
+              </div>
+              <div class="inside" style="margin-top: 407px;margin-left: 3px;">
+                們不知如何選擇，最終是依投票表決擇出兩款披薩。上餐速度蠻快的，但因是半開放式空間，戶外的蚊蟲較多，需特別注意防蚊蟲的問題，其餘不論是餐點或者環境都挺符合我們的心意。
+
+              </div>
+            </div>
+          </div>
+          <div><!--P.3-->
+            <!-- 上半部 -->
+            <div>
+              <img src="https://i.imgur.com/ay1Bdhl.jpg" id="" class="spic" style="float:left; margin-right: 8px;margin-left: 3px; margin-top: 0px;">
+              <div style="font-size: 20px;">
+                <b style="margin-left: 3px;margin-top: 10px;">蒜頭糖廠</b>
+              </div>
+              <div style="font-size:16px; height:100px;position: absolute;margin-left:255px;margin-top: 0px;">          
+                接著，我們來到了六腳必去的景點－蒜頭糖廠，一提到糖廠，便會令人聯想到過去台灣受到日本殖民時的株式會社，且在當時蔗糖是十分有名的出口品項，因此在印象中，糖廠不外乎就是傳統的日式建築，但是一進入園區，
+              </div>
+              <div class="inside" style="margin-top: 153px;margin-left:3px;">
+                最先映入眼簾的竟是一座車站，以及大大的火車頭。原來，於日治時期，這是專門用來載送蔗糖的小火車，如今，因應時代變遷，車上不再載送沉重的經濟作物，而是乘載了歷史痕跡與文化傳承的觀光列車。
+
+              </div>
+            </div>  
+            <!-- 下半部 -->
+            <div>
+              <img src="https://i.imgur.com/8kkixHH.jpg" class="spic" style="float:right; margin-left:-15px;position: absolute;margin-top: 227px;">
+              <div style="font-size: 20px; text-align: left;float:left; margin-top: 75px;">
+                <b style="margin-left: 3px;margin-right: 200px;">五分車</b>
+              </div>
+              <div style="font-size:16px; height:100px;position: absolute;margin-left:3px;margin-top: 250px;float: left; width: 230px;">              
+                五分車的班次一天僅有兩班，早上十一點與下午三點，我們很幸運的趕上其中一場，五分車上遊客眾多，且中老年人占了大多數，年輕人除了我們幾個閒來無事的大學生，便只有被父母帶著出遊的小小孩了。「鈴～」，隨
+              </div>
+              <div class="inside" style="margin-top: 402px;margin-left: 3px;">
+                著出發的鈴聲響起，我們一面搭乘五分車，一面聽導覽員講解沿途景物。沒有車窗的五分車，時盡正午的微微陽光與陣陣涼風，緩緩流入車廂，使人放鬆而沉浸在眼前的鄉野景色中，而此刻，我們腳下是摳隆摳隆的鐵軌聲，除了肩負歷史傳承的重要角色，似乎也正低訴著屬於六腳陳舊年代的故事。
+              </div>
+            </div>
+          </div>
+          <div><!--P.4-->
+            <!-- 上半部 -->
+            <div>
+              <img src="https://i.imgur.com/g5Z2tS1.jpg" id="" class="spic" style="float:left; margin-right: 8px;margin-left: 10px; margin-top: 5px;">
+              <div style="font-size: 20px;">
+                <b style="margin-left: 7px;margin-top: 10px;">日式建築</b>
+              </div>
+              <div style="font-size:16px; height:100px;position: absolute;margin-left:265px;margin-top: 5px">         
+                一趟40多分鐘的五分車之行之後，我們來到了同屬蒜頭糖廠中人煙較少的日式建築區，一踏入此地，古色古香的氣息撲面而來，然而因年久失修，些許的建築已有破損，僅有前些時日被戲劇拍演的仍保存良好，但在充滿
+              </div>
+              <div class="inside" style="margin-top: 158px;margin-left:3px;">
+                樹蔭的日式建築群中，讓我們彷彿身歷其境，穿梭回100多年前的殖民時代，可惜，寧靜如斯與不再完整的建築樣貌終究是將我們拉回現實，只嘆歲月如梭，蒜頭糖廠已不復當年榮景。
+              </div>
+            </div>  
+            <!-- 下半部 -->
+            <div>
+              <img src="https://i.imgur.com/so00x1B.jpg" class="spic" style="float:right; margin-left:-15px;position: absolute;margin-top: 248px;">
+              <div style="font-size: 20px; text-align: left;float:left; margin-top: 90px;">
+                <b style="margin-left: 3px;margin-right: 200px;">新寶珍蒜頭餅</b>
+              </div>
+              <div style="font-size:16px; height:100px;position: absolute;margin-left:3px;margin-top: 270px;float: left; width: 230px;">              
+                後來，我們前往下一站，是伴手禮時間，當地知名的伴手禮便是蒜頭餅，而新寶珍蒜頭餅是我們在網路查找時所推薦的。較為新穎的店鋪設計與明亮的燈光，與充滿鄉野氣息的環境有絲毫的違和感，走入店內，員工正忙碌的
+
+              </div>
+              <div class="inside" style="margin-top: 423px;margin-left: 3px;">
+                包裝商品，一盒盒的糕點整齊的擺放在桌上，也有零散一顆一顆的糕餅，供客人挑選，稍作詢問後，我們便決定買兩盒蒜頭餅回去嘗鮮。
+              </div>
+            </div>
+          </div>  
+          <div><!--P.5-->
+            <!-- 上半部 -->
+            <div>
+              <img src="https://i.imgur.com/GXebRFX.jpg" id="" class="spic" style="float:left; margin-right: 8px;margin-left: 3px; margin-top: 0px;">
+              <div style="font-size: 20px;">
+                <b style="margin-left: 3px;margin-top: 10px;">慶和柑仔店</b>
+              </div>
+              <div style="font-size:16px; height:100px;position: absolute;margin-left:255px;margin-top: 0px;">          
+                買了伴手禮過後，已是下午4點多了，此時我們決定前去朝聖電視劇《用九柑仔店》中的店鋪－慶和柑仔店，儘管抵達時已是午後近日落了，但仍有許多遊客與我們一樣前來造訪此地。柑仔店木造的建築充滿陳舊的氣息，店內放置大量的童
+              </div>
+              <div class="inside" style="margin-top: 153px;margin-left:3px;">
+                玩、零食、冰品，一項項的物品皆是傳統舊時代的痕跡，甚至在店門口擺放了以前的腳踏車與幾張板凳，供客人拍照。玩心頗重的我們自然也拍了不少照片，甚至買了泡泡水與玩具槍等，且當場即拆開包裝，玩的不亦樂乎。
+
+              </div>
+            </div>  
+            <!-- 下半部 -->
+            <div>
+              <img src="https://i.imgur.com/06baki1.jpg" class="spic" style="float:right; margin-left:-15px;position: absolute;margin-top: 253px;">
+              <div style="font-size: 20px; text-align: left;float:left; margin-top: 103px;">
+                <b style="margin-left: 3px;margin-right: 200px;">彩繪鸚鵡牆</b>
+              </div>
+              <div style="font-size:16px; height:100px;position: absolute;margin-left:3px;margin-top: 278px;float: left; width: 230px;">              
+                當天的最後一站是彩繪鸚鵡牆，日落時刻，當橘紅色的夕陽餘暉投射在一大面的彩繪牆，那場景簡直美不勝收，且因此地是堤防，因而還有人特地前來拍攝日落的美景。由於彩繪牆除了美觀外，還融入了可以與遊客拍照互
+              </div>
+              <div class="inside" style="margin-top: 430px;margin-left: 3px;">
+                動的小巧思，比如看似立體的斑馬線，在照片中看起來只要一不小心，便會踩空墜落，因此在拍照時，可依據遊客欲呈現的故事改變站姿，就能用照片呈現不同的逗趣場景，十分新奇有趣呢！
+              </div>
+            </div>
+          </div>
+          <div><!--P.6-->
+            <!-- 上半部 -->
+            <div>
+              <img src="https://i.imgur.com/pk9LKhx.jpg" id="" class="spic" style="float:left; margin-right: 8px;margin-left: 10px; margin-top: 5px;">
+              <div style="font-size: 20px;">
+                <b style="margin-left: 7px;margin-top: 10px;">北港朝天宮</b>
+              </div>
+              <div style="font-size:16px; height:100px;position: absolute;margin-left:265px;margin-top: 5px">         
+                結束了這半天行程時，約是晚上六點多了，我們便相約夜騎衝去雲林北港朝天宮吃晚餐，入秋的時節，穿得不多，因而回程挺冷的，且道路一片漆黑，若只有我一人肯定害怕騎乘這段路途，幸好，在五人彼此相伴之下，我們
+              </div>
+              <div class="inside" style="margin-top: 158px;margin-left:3px;">
+                最終平安結束這段旅途！
+              </div>
+            </div>
+          </div>
+          <div> <!--一個div一頁-->  <!--P.1-->
+            <div class="bigname">六腳一日遊</div>
+            <img src="https://i.imgur.com/vqfeBf7.jpg" class="pic">           
+            <div class="inf">
+              行程規劃：<br>
+              第一站：蒜頭生態公園<br>
+              第二站：蒜頭糖廠 日式建築的樣貌 <br>
+              第三站：午餐－鮮萃［北歐風］早午餐、鬆餅、咖啡 <br>
+              第四站：伴手禮－興旺餅舖<br>
+              第五站：點心－烤玉米、大腸包小腸<br>
+              此趟一日遊的行程當中，所使用的交通工具皆為摩托車。
+            </div>
+          </div>
+          <div><!--P.2-->
+            <!-- 上半部 -->
+            <div>
+              <img src="https://i.imgur.com/st0Bllz.png" id="" class="spic" style="float:left; margin-right: 8px;margin-left: 10px; margin-top: 5px;">
+              <div style="font-size: 20px;">
+                <b style="margin-left: 7px;margin-top: 10px;">六腳鄉</b>
+              </div>
+              <div style="font-size:16px; height:100px;position: absolute;margin-left:265px;margin-top: 5px">         
+                在12月一個冷風颼颼的日子裡，我們一行五人起了個大早，欲前往嘉義縣六腳鄉遊玩一天。8：30 在嘉義大學準時集合出發，從嘉義大學開始，途經的道路皆是大馬路。而在離開市區之後，是空曠的高鐵大道，來往車輛不算多
+              </div>
+              <div class="inside" style="margin-top: 158px;margin-left:3px;">
+                也不算少，是很適合騎乘機車的路，一路上幾乎是直行，就連身為路痴的我也只管埋頭向前即可，隨著路旁的風景不再出現高樓，且空間愈來愈空曠，映入眼簾的是一片片的綠意，難以想像，在萬物枯寂的冬日，頑強的草根仍然發展出屬於自己的曠野翠綠。
+              </div>
+            </div>  
+            <!-- 下半部 -->
+            <div>
+              <img src="https://i.imgur.com/lwectwv.jpg" class="spic" style="float:right; margin-left:-15px;position: absolute;margin-top: 270px;">
+              <div style="font-size: 20px; text-align: left;float:left; margin-top: 115px;">
+                <b style="margin-left: 3px;margin-right: 200px;">蒜頭生態公園</b>
+              </div>
+              <div style="font-size:16px; height:100px;position: absolute;margin-left:3px;margin-top: 298px;float: left; width: 230px;">              
+                在歷經了半個小時的車程後，我們抵達了第一站－蒜頭生態公園。這是一個佔地頗大的公園，一眼望去皆是草地，另外還有一個小小的湖泊。在颯颯寒風中，我們沿著小湖泊繞行了一圈，四周看似人煙稀少，卻也有人常常
+              </div>
+              <div class="inside" style="margin-top: 450px;margin-left: 3px;">
+                走動的痕跡。當我們在公園拍照留念時，便遇見了附近居民前來遛狗散步，在這樣寒冷的天氣中，著實令人佩服。
+              </div>
+            </div>
+          </div>
+          <div><!--P.3-->
+            <!-- 上半部 -->
+            <div>
+              <img src="https://i.imgur.com/ay1Bdhl.jpg" id="" class="spic" style="float:left; margin-right: 8px;margin-left: 3px; margin-top: 0px;">
+              <div style="font-size: 20px;">
+                <b style="margin-left: 3px;margin-top: 10px;">蒜頭糖廠</b>
+              </div>
+              <div style="font-size:16px; height:100px;position: absolute;margin-left:255px;margin-top: 0px;">          
+                接著，我們來到了六腳必去的景點－蒜頭糖廠，一提到糖廠，便會令人聯想到過去台灣受到日本殖民時的株式會社，且在當時蔗糖是十分有名的出口品項，因此在印象中，糖廠不外乎就是傳統的日式建築，但是一進入園區，最先映入眼簾的
+
+              </div>
+              <div class="inside" style="margin-top: 153px;margin-left:3px;">
+                竟是一座車站，以及大大的火車頭。原來，於日治時期，這是專門用來載送蔗糖的小火車，如今，因應時代變遷，車上不再載送沉重的經濟作物，而是乘載了歷史痕跡與文化傳承的觀光列車。
+
+              </div>
+            </div>  
+            <!-- 下半部 -->
+            <div>
+              <img src="https://i.imgur.com/8kkixHH.jpg" class="spic" style="float:right; margin-left:-15px;position: absolute;margin-top: 227px;">
+              <div style="font-size: 20px; text-align: left;float:left; margin-top: 75px;">
+                <b style="margin-left: 3px;margin-right: 200px;">五分車</b>
+              </div>
+              <div style="font-size:16px; height:100px;position: absolute;margin-left:3px;margin-top: 250px;float: left; width: 230px;">              
+                五分車的班次一天僅有兩班，早上十一點與下午三點，我們很幸運的趕上其中一場，五分車上遊客眾多，且中老年人占了大多數，年輕人除了我們幾個閒來無事的大學生，便只有被父母帶著出遊的小小孩了。「鈴～」，隨
+              </div>
+              <div class="inside" style="margin-top: 402px;margin-left: 3px;">
+                著出發的鈴聲響起，我們一面搭乘五分車，一面聽導覽員講解沿途景物。沒有車窗的五分車，時盡正午的微微陽光與陣陣涼風，緩緩流入車廂，使人放鬆而沉浸在眼前的鄉野景色中，而此刻，我們腳下是摳隆摳隆的鐵軌聲，除了肩負歷史傳承的重要角色，似乎也正低訴著屬於六腳陳舊年代的故事。
+              </div>
+            </div>
+          </div>
+          <div><!--P.4-->
+            <!-- 上半部 -->
+            <div>
+              <img src="https://i.imgur.com/g5Z2tS1.jpg" id="" class="spic" style="float:left; margin-right: 8px;margin-left: 10px; margin-top: 5px;">
+              <div style="font-size: 20px;">
+                <b style="margin-left: 7px;margin-top: 10px;">日式建築</b>
+              </div>
+              <div style="font-size:16px; height:100px;position: absolute;margin-left:265px;margin-top: 5px">         
+                一趟40多分鐘的五分車之行之後，我們來到了同屬蒜頭糖廠中人煙較少的日式建築區，一踏入此地，古色古香的氣息撲面而來，然而因年久失修，些許的建築已有破損，僅有前些時日被戲劇拍演的仍保存良好，但在充滿
+              </div>
+              <div class="inside" style="margin-top: 158px;margin-left:3px;">
+                樹蔭的日式建築群中，讓我們彷彿身歷其境，穿梭回100多年前的殖民時代，可惜，寧靜如斯與不再完整的建築樣貌終究是將我們拉回現實，只嘆歲月如梭，蒜頭糖廠已不復當年榮景。
+              </div>
+            </div>  
+            <!-- 下半部 -->
+            <div>
+              <img src="https://i.imgur.com/S5DcmM6.jpg" class="spic" style="float:right; margin-left:-15px;position: absolute;margin-top: 248px;">
+              <div style="font-size: 20px; text-align: left;float:left; margin-top: 90px;">
+                <b style="margin-left: 3px;margin-right: 200px;">鮮萃早午餐</b>
+              </div>
+              <div style="font-size:16px; height:100px;position: absolute;margin-left:3px;margin-top: 270px;float: left; width: 230px;">              
+                第三站是午餐時間，因此我們來到距離蒜頭糖廠有些距離的「鮮萃［北歐風］早午餐、鬆餅、咖啡」的早午餐店，一走進去，充滿童趣的布置讓氣氛顯得歡快，櫃台上亦擺了不少店家自製的手工娃娃，十分可愛。在忙碌了大
+
+
+              </div>
+              <div class="inside" style="margin-top: 423px;margin-left: 3px;">
+                半時日的中午近下午時刻，我們點了店內招牌舒芙蕾，並於此地稍作休息與整備，為往後的行程儲備能量。
+              </div>
+            </div>
+          </div>  
+          <div><!--P.5-->
+            <!-- 上半部 -->
+            <div>
+              <img src="https://i.imgur.com/eZWuCoE.jpg" id="" class="spic" style="float:left; margin-right: 8px;margin-left: 3px; margin-top: 0px;">
+              <div style="font-size: 20px;">
+                <b style="margin-left: 3px;margin-top: 10px;">興旺餅舖</b>
+              </div>
+              <div style="font-size:16px; height:100px;position: absolute;margin-left:255px;margin-top: 0px;">          
+                後來，我們前往第四站，是伴手禮時間，當地知名的伴手禮便是蒜頭餅，而興旺餅舖更是當地人所推薦的。傳統的店鋪設計像是一般的麵包作坊，看來已有些年代，走入店內，一盒盒的糕點餅乾整齊的擺放在桌上，供客人挑選，而老闆娘也
+
+              </div>
+              <div class="inside" style="margin-top: 153px;margin-left:3px;">
+                十分好客，或許是客人較少的緣故，我們與老闆娘拉扯閒談了近半個小時，才在老闆娘熱情的目送中離去。闆娘也十分好客，或許是客人較少的緣故，我們與老闆娘拉扯閒談了近半個小時，才在老闆娘熱情的目送中離去。
+              </div>
+            </div>  
+            <!-- 下半部 -->
+            <div>
+              <img src="https://i.imgur.com/yc07EXw.jpg" class="spic" style="float:right; margin-left:-15px;position: absolute;margin-top: 253px;">
+              <div style="font-size: 20px; text-align: left;float:left; margin-top: 103px;">
+                <b style="margin-left: 3px;margin-right: 200px;">烤玉米</b>
+              </div>
+              <div style="font-size:16px; height:100px;position: absolute;margin-left:3px;margin-top: 278px;float: left; width: 230px;">              
+                接續剛才的伴手禮店，最後我們來到與其相距不遠的點心區－烤玉米與大腸包小腸，此處也是六腳較繁榮的地帶。一來到烤玉米的攤位便發現等候的人不少，看著老闆娘熟練的炭烤著玉米再刷上特製的烤肉醬，光是在旁邊聞
+              </div>
+              <div class="inside" style="margin-top: 430px;margin-left: 3px;">
+                著便令人食指大動。一層一層地醬汁透過炭烤濃縮精華在玉米上，一拿到便迫不及待的奮力咬上一口，此刻便覺不虛此行。隨後是大腸包小腸，搭配上醬油與薑、蒜，濃烈的滋味在嘴裡散開，好不痛快。
+              </div>
+            </div>
+          </div>
+          <div><!--P.6-->
+            <!-- 上半部 -->
+            <div>
+              <img src="https://i.imgur.com/28iSmWS.jpg" id="" class="spic" style="float:left; margin-right: 8px;margin-left: 10px; margin-top: 5px;">
+              <div style="font-size: 20px;">
+                <b style="margin-left: 7px;margin-top: 10px;">歸途</b>
+              </div>
+              <div style="font-size:16px; height:100px;position: absolute;margin-left:265px;margin-top: 5px">         
+                結束這趟行程時，大約下午五點多，回到嘉義市區也鄰近晚上六點了，一整天的玩樂與體力的消耗仍舊是頗大的，但是鄉村小道的美麗景色、純樸的人文風氣以及兼具歷史意義的傳統建築，是我們在這趟旅程中最大的收穫。
+              </div>            
+            </div>
+            <img src="https://i.imgur.com/REzcbri.png" style="margin-top: 70px; margin-left: 120px;width: 250px;height: 250px;">
+          </div>  
+        </div>
+      </div>
+    <a id="next_page_button"></a>   <!--下一頁按鈕-->
+  </div>
+
+
+
+  <!--書本part-->
+  	<!--目錄頁-->
+  	<div id="6_book" class="white_content_book">
+      <!--關閉圖片如以下-->
+          <a href = "javascript:void(0)" onclick = "document.getElementById('6_book').style.display='none';document.getElementById('fade').style.display='none'">
+          <img src="https://i.imgur.com/B6M2gX9.png" style="position:absolute;top:90px;left:87%; width:40px; height: 40px"><!--叉叉-->
+      	</a>
+      <img src="https://i.imgur.com/zLpejvF.png" class="book_wrapper" style="z-index: 1;">    <!--黑色書-->
+      <div class="firstpage">
+        <div class="bookmenu">目錄</div>
+        <a href="javascript:void(1)" onclick="document.getElementById('6_book1').style.display='block'">
+          <img src="https://i.imgur.com/yacowDi.jpg" class="allpic"></a>
+        <div class="all">景點</div>
+      </div>
+      <div class="secondpage">  <!--一個div一頁-->
+        <a href="javascript:void(1)" onclick="document.getElementById('6_book2').style.display='block'">
+          <img src="https://i.imgur.com/wAFZwYk.jpg" class="foodpic"></a>
+        <div class="food">美食</div>
+        <a href="javascript:void(1)" onclick="document.getElementById('6_book3').style.display='block'">
+          <img src="https://i.imgur.com/RSsR8MY.jpg" class="specialpic"></a>
+        <div class="special">精選</div>
+      </div>    
+    </div>
+  	<!--點選目錄後-->
+    <!--總覽版--> 
+    <div id="6_book1" class="white_content_book">
+    	<!--叉叉(關閉此視窗)-->
+    	<a href="javascript:void(0)" onclick="document.getElementById('6_book1').style.display='none';document.getElementById('6_book').style.display='none';document.getElementById('fade').style.display='none'">
+          <img src="https://i.imgur.com/B6M2gX9.png" style="position:absolute;top:90px;left:87%; width:40px; height: 40px">
+      </a>
+     	<img src="https://i.imgur.com/zLpejvF.png" class="book_wrapper" style="z-index:-1;">    <!--黑色書-->
+      <div style="position: absolute; margin-left: 270px;margin-top: 105px;width: 500px"> <!--P.1-->
+        <div align="center" class="text">景點</div>
+        <div class="name1">蒜頭糖廠蔗埕文化園區</div>
+          <a href="javascript:void(2)" onclick="document.getElementById('6_book11').style.display='block';document.getElementById('6_book1').style.display='none';">
+            <img src="https://i.imgur.com/ay1Bdhl.jpg" alt="" class="photo">
+          </a>
+        <div class="name2">蒜頭生態公園</div>
+          <a href=""><img src="https://i.imgur.com/YkWtsFc.jpg" alt="" class="photo"></a>
+        <div class="name3">六家佃長壽橋(</div>
+          <a href=""><img src="https://i.imgur.com/XeVcWbz.jpg " alt="" class="photo"></a>
+        <div class="name4">陶藝之村墘窯休閒陶坊</div>
+          <a href=""><img src="https://i.imgur.com/G3rIXML.jpg" alt="" class="photo"></a>
+        </div>
+      <div style="position: absolute; margin-left: 775px;margin-top: 80px;width: 500px">
+          <div class="name5">彩繪鸚鵡牆</div>
+              <a href="javascript:void(2)" onclick="document.getElementById('6_book12').style.display='block';document.getElementById('6_book1').style.display='none';"><img src="https://i.imgur.com/06baki1.jpg" alt="" class="photo"></a>
+            <div class="name6">蟀哥農家民宿</div>
+              <a href=""><img src="https://i.imgur.com/8bjANjN.jpg" alt="" class="photo"></a>
+            <div class="name7">故宮三寶</div>
+              <a href=""><img src="https://i.imgur.com/vveuFsG.jpg" alt="" class="photo"></a>
+            <div class="name8">苦楝樹綠色隧道</div>
+              <a href=""><img src="https://i.imgur.com/hd1X6p6.jpg" alt="" class="photo"></a>
+            <div class="name9">鳳凰花池</div>
+              <a href=""><img src="https://i.imgur.com/GO9EgX9.jpg" alt="" class="photo"></a>
+            <div class="name10">慶和柑仔店</div>
+              <a href=""><img src="https://i.imgur.com/GXebRFX.jpg" alt="" class="photo"></a>
+      </div>
+      <!-- 返回鍵 返回第一層，不會回到主頁-->
+      <a href="javascript:void(0)" onclick="document.getElementById('6_book1').style.display='none'"><input type="button" class="back"></a> <!--herf裡別加東西-->
+      <a id="next_page_button"></a>   <!--下一頁按鈕-->
+    </div>
+    <!--美食版-->
+    <div>
+    <div id="6_book2" class="white_content_book">
+      <!--叉叉(關閉此視窗)-->
+      <a href="javascript:void(0)" onclick="document.getElementById('6_book2').style.display='none';document.getElementById('6_book').style.display='none';document.getElementById('fade').style.display='none'">
+          <img src="https://i.imgur.com/B6M2gX9.png" style="position:absolute;top:90px;left:87%; width:40px; height: 40px">
+      </a>
+      <img src="https://i.imgur.com/zLpejvF.png" class="book_wrapper" style="z-index:-1;">    <!--黑色書-->
+      <div style="position: absolute; margin-left: 270px;margin-top: 105px;width: 500px"> <!--P.1-->
+        <div align="center" class="text">美食</div>
+        <div class="name1">興旺餅舖</div>
+          <a href=""><img src="https://i.imgur.com/eZWuCoE.jpg" alt="" class="photo"></a>
+        <div class="name2">大腸包香腸</div>  
+         <a href="javascript:void(2)" onclick="document.getElementById('6_book21').style.display='block';"><img src="https://i.imgur.com/L86x8zM.jpg" alt="" class="photo"></a>
+        <div class="name3">新寶珍餅店</div>  
+          <a href=""><img src="https://i.imgur.com/so00x1B.jpg" alt="" class="photo"></a>
+        <div class="name4">巴度窑</div>  
+          <a href="javascript:void(2)" onclick="document.getElementById('6_book22').style.display='block';">
+            <img src="https://i.imgur.com/4R4JV8U.jpg" alt="" class="photo"></a> 
+      </div>
+      <div style="position: absolute; margin-left: 775px;margin-top: 80px;width: 500px"><!--P.2-->
+        <!-- 上半部 -->
+
+          <div class="name5">鮮萃早午餐</div>
+              <a href=""><img src="https://i.imgur.com/S5DcmM6.jpg" alt="" class="photo"></a>
+            <div class="name6">時代芋冰城</div>
+              <a href=""><img src="https://i.imgur.com/TWz88e1.jpg" alt="" class="photo"></a>
+            <div class="name7">正港臭豆腐</div>
+              <a href=""><img src="https://i.imgur.com/Xb3AXwF.jpg" alt="" class="photo"></a>
+            <div class="name8">烤玉米</div>  
+              <a href=""><img src="https://i.imgur.com/YJyYLkJ.jpg" alt="" class="photo"></a>
+      </div>
+
+      <!-- 返回鍵 返回第一層，不會回到主頁-->
+      <a href="javascript:void(0)" onclick="document.getElementById('6_book2').style.display='none'"><input type="button" class="back"></a> <!--herf裡別加東西-->
+    </div>
+    <!--精選-->
+    <div id="6_book3" class="white_content_book">
+       <a href="javascript:void(0)" onclick="document.getElementById('6_book3').style.display='none';document.getElementById('6_book').style.display='none';document.getElementById('fade').style.display='none'">
+          <img src="https://i.imgur.com/B6M2gX9.png" style="position:absolute;top:90px;left:87%; width:40px; height: 40px">
+      </a>
+      <img src="https://i.imgur.com/zLpejvF.png" class="book_wrapper" style="z-index:-1;">    <!--黑色書-->
+      <div style="position: absolute; margin-left: 270px;margin-top: 105px;width: 500px"> <!--P.1-->
+        <div align="center" class="text">精選</div>
+            <div class="name1">大腸包香腸</div>
+              <a href=""><img src="https://i.imgur.com/L86x8zM.jpg" alt="" class="photo"></a>
+            <div class="name2">巴度窑</div>
+              <a href=""><img src="https://i.imgur.com/4R4JV8U.jpg" alt="" class="photo"></a>
+            <div class="name3">興旺餅舖</div>
+              <a href=""><img src="https://i.imgur.com/eZWuCoE.jpg" alt="" class="photo"></a>
+            <div class="name4">蒜頭糖廠蔗埕文化園區</div>
+              <a href=""><img src="https://i.imgur.com/ay1Bdhl.jpg" alt="" class="photo"></a>
+      </div>
+      <div style="position: absolute; margin-left: 775px;margin-top: 80px;width: 500px"><!--P.2-->
+        <!-- 上半部 -->
+
+          <div class="name5">蒜頭生態公園</div>
+              <a href=""><img src="https://i.imgur.com/YkWtsFc.jpg" alt="" class="photo"></a>
+            <div class="name6">六家佃長壽橋</div>
+              <a href=""><img src="https://i.imgur.com/XeVcWbz.jpg" alt="" class="photo"></a>
+            <div class="name7">彩繪鸚鵡牆</div>
+              <a href=""><img src="https://i.imgur.com/06baki1.jpg" alt="" class="photo"></a>
+            <div class="name8">慶和柑仔店</div>
+              <a href="javascript:void(2)" onclick="document.getElementById('6_book32').style.display='block';">
+              <img src="https://i.imgur.com/GXebRFX.jpg" alt="" class="photo"></a>
+            <div class="name9">蟀哥農家民宿</div>
+              <a href=""><img src="https://i.imgur.com/8bjANjN.jpg" alt="" class="photo"></a>
+            <div class="name10">故宮三寶</div>
+              <a href="javascript:void(2)" onclick="document.getElementById('6_book31').style.display='block';">
+                <img src="https://i.imgur.com/vveuFsG.jpg" alt="" class="photo"></a>
+      </div>
+      <!-- 返回鍵 返回第一層，不會回到主頁-->
+      <a href="javascript:void(0)" onclick="document.getElementById('6_book3').style.display='none'"><input type="button" class="back"></a> <!--herf裡別加東西-->
+    </div>
+    <!--蒜頭糖廠蔗埕文化園區-->
+    <div id="6_book11" class="white_content_book">
+      <a href="javascript:void(0)" onclick="document.getElementById('6_book11').style.display='none';document.getElementById('6_book1').style.display='none';document.getElementById('6_book').style.display='none';document.getElementById('fade').style.display='none'">
+          <img src="https://i.imgur.com/B6M2gX9.png" style="position:absolute;top:90px;left:87%; width:40px; height: 40px">
+      </a>
+      <img src="https://i.imgur.com/zLpejvF.png" class="book_wrapper" style="z-index:-1;">    <!--黑色書-->
+      <div style="position: absolute; margin-left: 250px;margin-top: 80px;width: 500px">  <!--P.1-->
+        <div class="bigname" style="font-size: 38px;">蒜頭糖廠蔗埕文化園區</div>
+        <img src="https://i.imgur.com/ay1Bdhl.jpg" class="pic" style="margin-top: 30px;">       
+        <div class="inf">
+          地址：嘉義縣六腳鄉工廠村1號<br>
+          營業時間：08:00-17:00(無公休)<br>
+          電話：053800735<br>
+          鄰近景點：故宮南院/蒜頭生態公園<br>
+        </div>
+      </div>
+      <div style="position: absolute; margin-left: 775px;margin-top: 80px;width: 500px"><!--P.2-->
+        <!-- 上半部 -->
+        <div>
+          <img src="https://i.imgur.com/6dymO43.jpg" id="" class="spic" style="float:left; margin-right: 8px;margin-left: 0px; margin-top: 5px;">
+          <div style="font-size: 20px;">
+            <b style="margin-left: 3px;margin-top: 10px;">蒜頭糖廠</b>
+          </div>
+          <div style="font-size:16px; height:100px;position: absolute;margin-left:250px;margin-top: 5px"> 
+            西元1906年日人擇定在朴子溪中游南岸設立了「明治製糖株式會社蒜頭製糖所」（二戰後變稱為蒜頭糖廠），形成了新的聚落－工廠村，隨著會社的成立，鄰近地區產生了一些變化，舊聚落的土地遭到剝奪，蒜頭糖廠的設立，提供了附近
+          </div>
+          <div class="inside" style="margin-top: 158px;margin-left:0px;">
+          居民就業的機會，糖廠與鄰近地區產生了經濟的依附關係，在日治時期蒜頭糖廠有「明治寶庫」，二戰後有「臺糖寶庫」之稱。
+          </div>
+        </div>  
+        <!-- 下半部 -->
+        <div>
+          <img src="https://i.imgur.com/8kkixHH.jpg " class="spic" style="float:right; margin-left:-15px;position: absolute;margin-top: 270px;">
+          <div style="font-size: 20px; text-align: left;float:left; margin-top: 60px;">
+            <b style="margin-left: 3px;margin-right: 250px;">五分車</b>
+          </div>
+          <div style="font-size:16px; height:100px;position: absolute;margin-left:3px;margin-top: 238px;float: left; width: 230px;">              
+          蒜頭糖廠五分車，全程路線5.3公里，一趟旅程約35分鐘。列車自車站出發往太保、南靖方向行駛，車上有導覽人員為乘客講解沿途田園景致，以老鋼鐘為開車典禮，驛頭的簷前腳首有關蒜糖人文歷史、景觀建。有一個鋼鐘掛於遐將近百年囉，吸收日月天地的精華，地方流傳一句話：「老鋼鐘有靈氣，老人來摸食百
+          </div>
+          <div class="inside" style="margin-top: 455px;margin-left: 3px;">
+          二，囝仔來摸好育飼，小姐來摸皮膚幼綿綿，咱今仔邀請這隊的會長來舉辦開車典禮，噹！噹！噹！一聲智慧開，兩聲福運來，三聲咱大家平安大發財。」帶動歡樂氣氛。
+        </div>
+      </div>
+      <!-- 返回鍵 返回第一層，不會回到主頁-->
+      </div> 
+      <a href="javascript:void(0)" onclick="document.getElementById('6_book11').style.display='none';document.getElementById('6_book1').style.display='block'"><input type="button" class="back"></a>
+  </div>
+    <!--鸚鵡牆-->
+	   <div id="6_book12" class="white_content_book">
+      <a href="javascript:void(0)" onclick="document.getElementById('6_book12').style.display='none';document.getElementById('6_book1').style.display='none';document.getElementById('6_book').style.display='none';document.getElementById('fade').style.display='none'">
+          <img src="https://i.imgur.com/B6M2gX9.png" style="position:absolute;top:90px;left:87%; width:40px; height: 40px">
+      </a>
+      <img src="https://i.imgur.com/zLpejvF.png" class="book_wrapper" style="z-index:-1;">    <!--黑色書-->
+      <div style="position: absolute; margin-left: 250px;margin-top: 80px;width: 500px">  <!--P.1-->
+        <div class="bigname">彩繪鸚鵡牆</div>
+        <img src="https://i.imgur.com/06baki1.jpg" class="pic" style="margin-top: 30px;">       
+        <div class="inf">
+          地址：北港溪竹子腳堤岸<br>
+          營業時間：24小時營業(無公休)<br>
+          電話：無<br>
+          鄰近景點：鳳凰花池<br>
+
+        </div>
+      </div>
+      <div style="position: absolute; margin-left: 775px;margin-top: 80px;width: 500px"><!--P.2-->
+        <!-- 上半部 -->
+        <div>
+          <img src="https://i.imgur.com/nEGLKG4.jpg" id="" class="spic" style="float:left; margin-right: 8px;margin-left: 0px; margin-top: 10px;">
+          <div style="font-size: 20px;margin-top: 15px;">
+            <b style="margin-left: 3px;">彩繪鸚鵡牆</b>
+          </div>
+          <div style="font-size:16px; height:100px;position: absolute;margin-left:250px;margin-top: 5px"> 
+            嘉義縣偏鄉六腳鄉竹本、永賢村一群中年在地居民與旅外鄉親，為活化老化聚落，集資委請牧田創意彩繪工作室費時3個月，在北港溪竹子腳堤岸，彩繪全長100公尺最高250公分堤岸，以熱門寵物鸚鵡做主角，網路徵求160隻各式各樣鳥
+          </div>
+          <div class="inside" style="margin-top: 165px;margin-left:0px;">
+          ，為牠們寫真，日前完成全台最大鸚鵡彩繪牆。
+
+          </div>
+        </div>  
+        <!-- 下半部 -->
+        <div>
+          <img src="https://i.imgur.com/Ww3g8iq.jpg " class="spic" style="float:right; margin-left:-15px;position: absolute;margin-top: 225px;">
+          <div style="font-size: 20px; text-align: left;float:left; margin-top: 60px;">
+            <b style="margin-left: 3px;margin-right: 250px;">鸚鵡</b>
+          </div>
+          <div style="font-size:16px; height:100px;position: absolute;margin-left:3px;margin-top: 238px;float: left; width: 230px;">              
+          身為牧田創意彩繪工作室的靈魂人物、彩繪師陳詩薏表示，大部分在台灣的彩繪牆多以貓、狗或魚類為主題創作，但將「鸚鵡」作為彩繪角色幾乎看不到，因此，團隊開始在網路上徵選全台各地鳥友的鸚鵡照片，將這些網友票選出人氣最高、姿勢適合的
+          </div>
+          <div class="inside" style="margin-top: 410px;margin-left: 3px;">
+          鸚鵡，繪製到牆上，此外，還會在地面標示「拍照區」，協助遊客找到最佳拍攝角度。
+        </div>
+      </div>
+    </div>
+     <a href="javascript:void(0)" onclick="document.getElementById('6_book12').style.display='none';document.getElementById('6_book1').style.display='block'"><input type="button" class="back"></a>
+  </div>
+  <!--大腸包小腸-->
+  <div id="6_book21" class="white_content_book">
+      <a href="javascript:void(0)" onclick="document.getElementById('6_book21').style.display='none';document.getElementById('6_book2').style.display='none';document.getElementById('6_book').style.display='none';document.getElementById('fade').style.display='none'">
+          <img src="https://i.imgur.com/B6M2gX9.png" style="position:absolute;top:90px;left:87%; width:40px; height: 40px">
+      </a>
+          <img src="https://i.imgur.com/zLpejvF.png" class="book_wrapper" style="z-index:-1;">    <!--黑色書-->
+      <div style="position: absolute; margin-left: 250px;margin-top: 80px;width: 500px">  <!--P.1-->
+        <div class="bigname">大腸包香腸</div>
+        <img src="https://i.imgur.com/L86x8zM.jpg" class="pic" style="margin-top: 30px;">       
+        <div class="inf">
+          地址：嘉義縣六腳鄉蒜頭村188號(蒜頭國小)<br>
+          營業時間：下午13:30-售完公休日禮拜四<br>
+          電話：0911177173<br>
+          鄰近景點：六家佃長壽橋<br>
+
+
+        </div>
+      </div>
+      <div style="position: absolute; margin-left: 775px;margin-top: 80px;width: 500px"><!--P.2-->
+        <!-- 上半部 -->
+        <div>
+          <img src="https://i.imgur.com/PVJiUE5.jpg" id="" class="spic" style="float:left; margin-right: 8px;margin-left: 0px; margin-top: 10px;">
+          <div style="font-size: 20px;margin-top: 15px;">
+            <b style="margin-left: 3px;">大腸包香腸</b>
+          </div>
+          <div style="font-size:16px; height:100px;position: absolute;margin-left:250px;margin-top: 5px"> 
+            位於蒜頭菜市場的老店大腸、香腸，從第一代傳承下來至今已經營業幾十年了。第二代老闆娘陳雲合女士，邊烤著香腸邊說：「從婆婆手上接攤子時，兒子才剛上小學，現在都已經十六年過去了」。木炭燒的火紅，老闆娘不斷翻動香腸、
+
+          </div>
+          <div class="inside" style="margin-top: 160px;margin-left:0px;">
+            米腸，然後切片淋上醬料，再加上生薑片、蒜頭瓣。從灌香腸、米腸到醃生薑片，一切都是自己來。老顧客開玩笑的說，裡面有加嗎啡吃了會令人上癮。
+
+          </div>
+        </div>  
+        <!-- 下半部 -->
+        <div>
+          <img src="https://i.imgur.com/K9RI8BS.jpg " class="spic" style="float:right; margin-left:-15px;position: absolute;margin-top: 245px;">
+          <div style="font-size: 20px; text-align: left;float:left; margin-top: 80px;">
+            <b style="margin-left: 3px;margin-right: 250px;">天然原料</b>
+          </div>
+          <div style="font-size:16px; height:100px;position: absolute;margin-left:3px;margin-top: 260px;float: left; width: 230px;">              
+          老闆娘表示所有原料都是天然的，製作也很費工。香腸用上等的豬肉，並用五香、肉桂等香料調味；米腸中的糯米要加上土豆、肉燥炒過，再拿去蒸才會香；佐料生薑片，要一年左右的醃製時間等等。如此耗費時間和手續，難怪能夠作出與眾不同、
+          </div>
+          <div class="inside" style="margin-top: 430px;margin-left: 3px;">
+          風味獨具的美味小吃。
+        </div>
+      </div>
+    </div>
+     <a href="javascript:void(0)" onclick="document.getElementById('6_book21').style.display='none';document.getElementById('6_book2').style.display='block'"><input type="button" class="back"></a>
+  </div>
+  <!--八度邀-->
+  <div id="6_book22" class="white_content_book">
+      <a href="javascript:void(0)" onclick="document.getElementById('6_book22').style.display='none';document.getElementById('6_book2').style.display='none';document.getElementById('6_book').style.display='none';document.getElementById('fade').style.display='none'">
+          <img src="https://i.imgur.com/B6M2gX9.png" style="position:absolute;top:90px;left:87%; width:40px; height: 40px">
+      </a>
+          <img src="https://i.imgur.com/zLpejvF.png" class="book_wrapper" style="z-index:-1;">    <!--黑色書-->
+      <div style="position: absolute; margin-left: 250px;margin-top: 80px;width: 500px">  <!--P.1-->
+        <div class="bigname">巴度窑</div>
+        <img src="https://i.imgur.com/4R4JV8U.jpg" class="pic" style="margin-top: 30px;">       
+        <div class="inf">
+          地址：嘉義縣六腳鄉蒜南村448-5號<br>
+          營業時間：10:00–20:00 周一公休<br>
+          電話：05-3801329<br>
+        </div>
+      </div>
+      <div style="position: absolute; margin-left: 775px;margin-top: 80px;width: 500px"><!--P.2-->
+        <!-- 上半部 -->
+        <div>
+          <img src="https://i.imgur.com/o79RKbf.jpg" id="" class="spic" style="float:left; margin-right: 8px;margin-left: 0px; margin-top: 10px;">
+          <div style="font-size: 20px;margin-top: 15px;">
+            <b style="margin-left: 3px;">窯烤披薩</b>
+          </div>
+          <div style="font-size:16px; height:100px;position: absolute;margin-left:250px;margin-top: 5px"> 
+            店內以窯烤披薩為主，搭配其他的窯烤料理與飲料。溼拖把抹過內窯檯面，吸塵器煽動已停滯火苗的龍眼木，測溫後把雞翅、披薩放入內，等候時間到來再輕鬆拖出來。窯烤披薩採用一般業者少用的龍眼木，因這附近大多數村民皆種植龍
+          </div>
+          <div class="inside" style="margin-top: 160px;margin-left:0px;">
+            眼取得較為容易，且除了收購外甚至靠自己砍伐自己切割來降低成本，一架獨特的油壓式劈柴機器來自於自己的構想，相對省去了不少財力與人力成本。
+
+          </div>
+        </div>  
+        <!-- 下半部 -->
+        <div>
+          <img src="https://i.imgur.com/mdjUZqm.jpg" class="spic" style="float:right; margin-left:-15px;position: absolute;margin-top: 245px;">
+          <div style="font-size: 20px; text-align: left;float:left; margin-top: 80px;">
+            <b style="margin-left: 3px;margin-right: 250px;">緣由</b>
+          </div>
+          <div style="font-size:16px; height:100px;position: absolute;margin-left:3px;margin-top: 260px;float: left; width: 230px;">              
+          家園庭前，窯自己造；柴自己砍，聽來一切都比別人來的得天獨厚。但製披薩的手功又從哪裡學？他說是日本人來教的。原來說是只要採購這家知名的日本麵粉，公司那方就會派人來教會如何製作披薩了。在這樣天時地利人和之下，他開創了較輕巧事業
+          </div>
+          <div class="inside" style="margin-top: 435px;margin-left: 3px;">
+          的第二春絕不會讓他與家人么巴度了。
+        </div>
+      </div>
+    </div>
+     <a href="javascript:void(0)" onclick="document.getElementById('6_book22').style.display='none';document.getElementById('6_book2').style.display='block'"><input type="button" class="back"></a>
+  </div>
+  <!--故宮三寶-->
+  <div id="6_book31" class="white_content_book">
+      <a href="javascript:void(0)" onclick="document.getElementById('6_book31').style.display='none';document.getElementById('6_book3').style.display='none';document.getElementById('6_book').style.display='none';document.getElementById('fade').style.display='none'">
+          <img src="https://i.imgur.com/B6M2gX9.png" style="position:absolute;top:90px;left:87%; width:40px; height: 40px">
+      </a>
+          <img src="https://i.imgur.com/zLpejvF.png" class="book_wrapper" style="z-index:-1;">    <!--黑色書-->
+      <div style="position: absolute; margin-left: 250px;margin-top: 80px;width: 500px">  <!--P.1-->
+        <div class="bigname">故宮三寶</div>
+        <img src="https://i.imgur.com/vveuFsG.jpg" class="pic" style="margin-top: 30px;">       
+        <div class="inf">
+          地址：嘉義縣六腳鄉蒜頭村7-20號<br>
+          營業時間：24小時營業(無公休)<br>
+          電話：無<br>
+          鄰近景點：新寶珍餅店<br>
+        </div>
+      </div>
+      <div style="position: absolute; margin-left: 775px;margin-top: 80px;width: 500px"><!--P.2-->
+        <!-- 上半部 -->
+        <div>
+          <img src="https://i.imgur.com/5Yzhclg.jpg" id="" class="spic" style="float:left; margin-right: 8px;margin-left: 0px; margin-top: 10px;">
+          <div style="font-size: 20px;margin-top: 15px;">
+            <b style="margin-left: 3px;">故宮三寶</b>
+          </div>
+          <div style="font-size:16px; height:100px;position: absolute;margin-left:250px;margin-top: 5px"> 
+            國立故宮博物院補助故宮南院周邊鄉鎮市公所進行故宮南院意象工程，六腳鄉公所製作巨型「故宮三寶」，超巨大的翠玉白菜、肉形石及毛公鼎成為拍照景點。放大的文物創作，在尚未完工時，便吸引不少遊客前來參訪，來訪的大朋友、
+
+
+          </div>
+          <div class="inside" style="margin-top: 160px;margin-left:0px;">
+            小朋友皆可依據自己的喜好，擺出各種不同的姿勢，與故宮文物拍照留念。
+          </div>
+        </div>  
+        <!-- 下半部 -->
+        <div>
+          <img src="https://i.imgur.com/5oNndyv.jpg" class="spic" style="float:right; margin-left:-15px;position: absolute;margin-top: 245px;">
+          <div style="font-size: 18px; text-align: left;float:left; margin-top: 80px;">
+            <b style="margin-left: 3px;margin-right: 250px;">肉形石、翠玉白菜、毛公鼎</b>
+          </div>
+          <div style="font-size:16px; height:100px;position: absolute;margin-left:3px;margin-top: 260px;float: left; width: 230px;">              
+          六腳鄉長陳川崎說，公所承租鄉道嘉五十七線靠近蒜頭村六腳鄉農會旁一處空地，設置大型「故宮三寶」入口意象，讓來往遊客認識故宮國寶，一到六腳鄉就覺得已到故宮南院；空地整理成綠地公園，且鄰近為朴子溪自行車道，適合民眾全家從蒜頭糖廠旁
+
+          </div>
+          <div class="inside" style="margin-top: 432px;margin-left: 3px;">
+          六家佃長壽橋騎單車往返，成為拍照景點。
+        </div>
+      </div>
+    </div>
+     <a href="javascript:void(0)" onclick="document.getElementById('6_book31').style.display='none';document.getElementById('6_book3').style.display='block'"><input type="button" class="back"></a>
+  </div>
+<!--慶和雜貨店-->
+  <div id="6_book32" class="white_content_book">
+      <a href="javascript:void(0)" onclick="document.getElementById('6_book32').style.display='none';document.getElementById('6_book3').style.display='none';document.getElementById('6_book').style.display='none';document.getElementById('fade').style.display='none'">
+          <img src="https://i.imgur.com/B6M2gX9.png" style="position:absolute;top:90px;left:87%; width:40px; height: 40px">
+      </a>
+          <img src="https://i.imgur.com/zLpejvF.png" class="book_wrapper" style="z-index:-1;">    <!--黑色書-->
+      <div style="position: absolute; margin-left: 250px;margin-top: 80px;width: 500px">  <!--P.1-->
+        <div class="bigname">慶和柑仔店</div>
+        <img src="https://i.imgur.com/GXebRFX.jpg" class="pic" style="margin-top: 30px;">       
+        <div class="inf">
+          地址：嘉義縣六腳鄉166縣道91號<br>
+          營業時間：06：30～20：00<br>
+          電話：05-3801989<br>
+          鄰近地點：蟀哥農家民宿/蟀哥農家民宿<br>
+
+
+        </div>
+      </div>
+      <div style="position: absolute; margin-left: 775px;margin-top: 80px;width: 500px"><!--P.2-->
+        <!-- 上半部 -->
+        <div>
+          <img src="https://i.imgur.com/h6C6Bnr.jpg" id="" class="spic" style="float:left; margin-right: 8px;margin-left: 0px; margin-top: 10px;">
+          <div style="font-size: 20px;margin-top: 15px;">
+            <b style="margin-left: 3px;">用九柑仔店</b>
+          </div>
+          <div style="font-size:16px; height:100px;position: absolute;margin-left:250px;margin-top: 5px"> 
+            慶和柑仔店是電視劇「用九柑仔店」劇組的主要場景，同時也是嘉義縣六腳鄉推薦景點。自電視劇「用九柑仔店」開播以來，就吸引了不少人前來朝聖，也讓嘉義六腳這個小鄉鎮，瞬間熱鬧了起來。「用九柑仔店」是一部具有溫度的
+
+
+          </div>
+          <div class="inside" style="margin-top: 160px;margin-left:0px;">
+            電視劇，深受觀眾喜愛，也使各地遊客興起來訪念頭，一探「用九柑仔店」電視場景，如此亦為寧靜的小村莊帶來了不一樣的生氣。
+          </div>
+        </div>  
+        <!-- 下半部 -->
+        <div>
+          <img src="https://i.imgur.com/m26ar9J.jpg" class="spic" style="float:right; margin-left:-15px;position: absolute;margin-top: 245px;">
+          <div style="font-size: 20px; text-align: left;float:left; margin-top: 80px;">
+            <b style="margin-left: 3px;margin-right: 250px;">慶和柑仔店</b>
+          </div>
+          <div style="font-size:16px; height:100px;position: absolute;margin-left:3px;margin-top: 260px;float: left; width: 230px;">              
+          慶和柑仔店裡面保留了以前讓人懷念的柑仔店模樣，販售好吃的古早味玉米冰棒、芋頭冰棒、紅豆冰等。店內櫃台也擺上了戳戳樂，且一如往昔，戳一次10元，裏頭有各式各樣的小玩具，因此有許多小朋友纏著爸媽試試手氣。除此之外，店內也販賣多款
+
+          </div>
+          <div class="inside" style="margin-top: 435px;margin-left: 3px;">
+          飽含年代感的童玩小物，如玩具空氣槍、泡泡水等，無論大朋友小朋友皆玩得不亦樂乎。
+        </div>
+      </div>
+    </div>
+     <a href="javascript:void(0)" onclick="document.getElementById('6_book32').style.display='none';document.getElementById('6_book3').style.display='block'"><input type="button" class="back"></a>
+  </div>
+        <!-- The JavaScript -->
+        <script type="text/javascript">
+            $(function() {
+                var $menu           = $('#menu');
+                var $mybook         = $('#mybook');
+                var $bttn_next      = $('#next_page_button');
+                var $bttn_prev      = $('#prev_page_button');
+                var $loading        = $('#loading');
+                var $mybook_images  = $mybook.find('img');
+                var cnt_images      = $mybook_images.length;
+                var loaded          = 0;
+                //preload all the images in the book,
+                //and then call the booklet plugin
+
+                $mybook_images.each(function(){
+                    var $img    = $(this);
+                    var source  = $img.attr('src');
+                    $('<img/>').load(function(){
+                        ++loaded;
+                        if(loaded == cnt_images){
+                            $loading.hide();
+                            $bttn_next.show();
+                            $bttn_prev.show();
+                            $mybook.show().booklet({
+                                name:               null,                            // name of the booklet to display in the document title bar
+                                width:              1020,                             // container width
+                                height:             625,                             // container height
+                                speed:              600,                             // speed of the transition between pages
+                                direction:          'LTR',                           // direction of the overall content organization, default LTR, left to right, can be RTL for languages which read right to left
+                                startingPage:       0,                               // index of the first page to be displayed
+                                easing:             'easeInOutQuad',                 // easing method for complete transition
+                                easeIn:             'easeInQuad',                    // easing method for first half of transition
+                                easeOut:            'easeOutQuad',                   // easing method for second half of transition
+
+                                closed:             true,                           // start with the book "closed", will add empty pages to beginning and end of book
+                                closedFrontTitle:   null,                            // used with "closed", "menu" and "pageSelector", determines title of blank starting page
+                                closedFrontChapter: null,                            // used with "closed", "menu" and "chapterSelector", determines chapter name of blank starting page
+                                closedBackTitle:    null,                            // used with "closed", "menu" and "pageSelector", determines chapter name of blank ending page
+                                closedBackChapter:  null,                            // used with "closed", "menu" and "chapterSelector", determines chapter name of blank ending page
+                                covers:             false,                           // used with  "closed", makes first and last pages into covers, without page numbers (if enabled)
+
+                                pagePadding:        10,                              // padding for each page wrapper
+                                pageNumbers:        true,                            // display page numbers on each page
+
+                                hovers:             false,                            // enables preview pageturn hover animation, shows a small preview of previous or next page on hover
+                                overlays:           false,                            // enables navigation using a page sized overlay, when enabled links inside the content will not be clickable
+                                tabs:               false,                           // adds tabs along the top of the pages
+                                tabWidth:           60,                              // set the width of the tabs
+                                tabHeight:          20,                              // set the height of the tabs
+                                arrows:             false,                           // adds arrows overlayed over the book edges
+                                cursor:             'pointer',                       // cursor css setting for side bar areas
+
+                                hash:               false,                           // enables navigation using a hash string, ex: #/page/1 for page 1, will affect all booklets with 'hash' enabled
+                                keyboard:           true,                            // enables navigation with arrow keys (left: previous, right: next)
+                                next:               $bttn_next,                     // selector for element to use as click trigger for next page
+                                prev:               $bttn_prev,                     // selector for element to use as click trigger for previous page
+
+                                menu:               null,                            // selector for element to use as the menu area, required for 'pageSelector'
+                                pageSelector:       false,                           // enables navigation with a dropdown menu of pages, requires 'menu'
+                                chapterSelector:    false,                           // enables navigation with a dropdown menu of chapters, determined by the "rel" attribute, requires 'menu'
+/*
+                                shadows:            true,                            // display shadows on page animations
+                                shadowTopFwdWidth:  166,                             // shadow width for top forward anim
+                                shadowTopBackWidth: 166,                             // shadow width for top back anim
+                                shadowBtmWidth:     50,                              // shadow width for bottom shadow
+*/
+                                before:             function(){},                    // callback invoked before each page turn animation
+                                after:              function(){}                     // callback invoked after each page turn animation
+                            });
+                            Cufon.refresh();
+                        }
+                    }).attr('src',source);
+                });
+                
+            });
+        </script>
+    </div> 
+    <div id="fade" class="black_overlay"></div> 
+
+  </div>
+
+  <div id="fade" class="black_overlay">
+  </div> 
+    <script src="booklet/jquery.easing.1.3.js" type="text/javascript"></script>
+    <script src="booklet/jquery.booklet.1.1.0.min.js" type="text/javascript"></script>
+
+
+  <!--溫度計part-->
+  <div id="8_cal" class="tv_background">
+    <!--關閉圖片如以下-->
+    <a href = "javascript:void(0)" onclick = "document.getElementById('8_cal').style.display='none';document.getElementById('fade').style.display='none'"><img src="https://i.imgur.com/B6M2gX9.png" style="position:absolute;top:3px;left:82%; width:40px; height: 40px"></a>
+    <!--Youtube影片--> 
+    <iframe width="660" height="375"  src="天氣.php" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe> 
+  </div>
+  <div id="fade" class="black_overlay"></div>
+
+  <header>
+  <!--伸縮導覽列-->
+  <div style="width:90%;">
+  <input type="button" id='menubutton' style="background-image:url('https://i.imgur.com/1AWmcXI.png');width:80px;height:80px;border:0px;">
+  <nav class="sidebar"> 
+      <ul class="one">
+            <li><a href="javascript:void(0)" onclick = "document.getElementById('1_map').style.display='block';document.getElementById('fade').style.display='block'">認識六腳</a> &nbsp;&nbsp;</li>
+            <li><a href="javascript:void(0)" onclick = "document.getElementById('3_dog').style.display='block';document.getElementById('fade').style.display='block'">最新消息</a> &nbsp;&nbsp;</li>
+            <li><a href="#">景點介紹</a> &nbsp;&nbsp;
+              <ul class="two">
+              <li><a href="javascript:void(0)" onclick = "document.getElementById('6_book1').style.display='block';document.getElementById('fade').style.display='block'">景點</a></li>
+              <li><a href="javascript:void(0)" onclick = "document.getElementById('6_book3').style.display='block';document.getElementById('fade').style.display='block'">精選</a></li>
+              <li><a href="javascript:void(0)" onclick = "document.getElementById('6_book2').style.display='block';document.getElementById('fade').style.display='block'">美食</a></li>
+              </ul>
+            </li>
+            <li><a href="javascript:void(0)" onclick = "document.getElementById('7_mag').style.display='block';document.getElementById('fade').style.display='block'">旅遊指南</a> &nbsp;&nbsp;
+            </li>
+            <li><a href="#">旅遊諮詢</a> &nbsp;&nbsp;
+              <ul class="two">
+              <li><a href="javascript:void(0)" onclick = "document.getElementById('light1').style.display='block';document.getElementById('fade').style.display='block'">貼心小叮嚀</a></li>
+              <li><a href="javascript:void(0)" onclick = "document.getElementById('light2').style.display='block';document.getElementById('fade').style.display='block'">公家機關</a></li>
+              <li><a href="javascript:void(0)" onclick = "document.getElementById('light3').style.display='block';document.getElementById('fade').style.display='block'">診所/醫院</a></li>
+              </ul>
+            </li>
+            <li><a href="javascript:void(0)" onclick = "document.getElementById('4_tv').style.display='block';document.getElementById('fade').style.display='block'">影音專區</a></li>
+        </ul>
+    </nav>
+  </div>
+  </header>
+
+</body>
+
+<script src="網頁程式設計第六組-六腳行網頁.js" language="javascript"></script>
+</html>
